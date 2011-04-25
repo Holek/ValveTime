@@ -1,0 +1,1 @@
+GiantBomb::Api.key("your_giantbomb_api_key")
