@@ -4,6 +4,7 @@ gem 'rails', '3.0.7'
 gem 'hintable_levenshtein'
 gem 'haml'
 gem 'rails_config'
+gem 'jquery-rails', '>= 0.2.6'
 
 group :development, :test do
   gem 'cucumber'

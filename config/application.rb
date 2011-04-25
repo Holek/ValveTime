@@ -45,5 +45,7 @@ module ValveTime
     config.generators do |g|
       g.template_engine :haml
     end
+
+    config.action_view.javascript_expansions[:defaults] = %w(jquery.min jquery-ui.min rails timepicker application)
   end
 end
