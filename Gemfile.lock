@@ -70,6 +70,8 @@ GEM
       activesupport (= 3.0.7)
       bundler (~> 1.0)
       railties (= 3.0.7)
+    rails_config (0.2.1)
+      activesupport (~> 3.0)
     railties (3.0.7)
       actionpack (= 3.0.7)
       activesupport (= 3.0.7)
@@ -105,6 +107,7 @@ DEPENDENCIES
   haml
   hintable_levenshtein
   rails (= 3.0.7)
+  rails_config
   rcov
   rspec
   rspec-rails
