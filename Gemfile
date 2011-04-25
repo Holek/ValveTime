@@ -5,6 +5,7 @@ gem 'hintable_levenshtein'
 gem 'haml'
 gem 'rails_config'
 gem 'jquery-rails', '>= 0.2.6'
+gem 'giantbomb'
 
 group :development, :test do
   gem 'cucumber'
