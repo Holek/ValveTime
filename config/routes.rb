@@ -4,7 +4,7 @@ ValveTime::Application.routes.draw do
 
   root :to => "convert#index"
   
-  match 'autocomplete/:id' => 'convert#autocomplete', :as => :autocomplete
+  match 'autocomplete' => 'convert#autocomplete', :as => :autocomplete
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
