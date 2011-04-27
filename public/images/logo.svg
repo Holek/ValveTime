@@ -18,7 +18,7 @@
    inkscape:export-filename="/home/holek/projekty/ValveTime/public/images/logo.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="logo.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -1049,6 +1049,77 @@
        y1="-595"
        x2="62.4063"
        y2="-603.18707" />
+    <filter
+       id="filter3267"
+       inkscape:label="Duotone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Change colors to a duotone palette"
+       y="0"
+       x="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix3269"
+         type="hueRotate"
+         values="180"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix3329" />
+      <feColorMatrix
+         id="feColorMatrix3331"
+         type="saturate"
+         values="0"
+         result="result1"
+         in="fbSourceGraphic" />
+      <feFlood
+         id="feFlood3333"
+         flood-color="rgb(9,111,152)"
+         result="result2" />
+      <feBlend
+         id="feBlend3335"
+         in2="result1"
+         mode="screen"
+         result="result2" />
+      <feComposite
+         id="feComposite3337"
+         in2="fbSourceGraphic"
+         operator="in"
+         in="result2" />
+    </filter>
+    <filter
+       id="filter3319"
+       inkscape:label="Duotone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Change colors to a duotone palette"
+       height="1"
+       width="1"
+       y="0"
+       x="0"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix3321"
+         type="saturate"
+         values="0"
+         result="result1" />
+      <feFlood
+         id="feFlood3323"
+         flood-color="rgb(9,111,152)"
+         result="result2" />
+      <feBlend
+         id="feBlend3325"
+         in2="result1"
+         mode="screen"
+         result="result2" />
+      <feComposite
+         id="feComposite3327"
+         in2="SourceGraphic"
+         operator="in"
+         in="result2" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1057,9 +1128,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="202.77285"
-     inkscape:cy="87.521548"
+     inkscape:zoom="1.4"
+     inkscape:cx="125.76957"
+     inkscape:cy="125.90291"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1076,7 +1147,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1087,22 +1158,11 @@
      transform="translate(0,-852.36218)">
     <g
        id="g3724"
-       transform="matrix(0.99346006,0,0,0.99367121,-0.98314153,849.61423)">
+       transform="matrix(1.0347255,0,0,1.0334692,-1.0282566,849.74572)">
       <g
          transform="matrix(5.7856867,0,0,5.7856867,-154.68983,-114.06486)"
-         id="g3691">
-        <circle
-           sodipodi:ry="26.5"
-           sodipodi:rx="26.5"
-           sodipodi:cy="29.5"
-           sodipodi:cx="32.5"
-           cx="32.5"
-           cy="29.5"
-           r="26.5"
-           transform="matrix(0.648118,0,0,0.6481314,23.464458,18.689034)"
-           id="circle3820"
-           style="fill:url(#radialGradient4009);stroke:none"
-           d="M 59,29.5 C 59,44.135546 47.135546,56 32.5,56 17.864454,56 6,44.135546 6,29.5 6,14.864454 17.864454,3 32.5,3 47.135546,3 59,14.864454 59,29.5 z" />
+         id="g3691"
+         style="filter:url(#filter3267)">
         <circle
            sodipodi:ry="25.799999"
            sodipodi:rx="25.799999"
@@ -1850,7 +1910,7 @@
          inkscape:transform-center-y="-14.510127"
          inkscape:transform-center-x="15.037797"
          sodipodi:nodetypes="ssssssccsccsssccsccsssssssscccccccsssssscccccs"
-         style="fill:#000000"
+         style="fill:#000000;filter:url(#filter3319)"
          inkscape:connector-curvature="0"
          d="m 134.44325,74.221344 c 0,4.70106 -4.17871,8.51413 -8.87975,8.51413 -4.70106,0 -8.35743,-3.81307 -8.35743,-8.51413 0,-4.64882 3.65637,-8.46189 8.35743,-8.46189 4.70104,0 8.87975,3.81307 8.87975,8.46189 z m -8.87975,-15.77461 c -8.35743,0 -15.67017,6.99933 -15.67017,15.72238 l -9.924433,14.15539 c -0.52234,-0.0522 -0.52234,-0.10446 -1.04469,-0.10446 -2.08935,0 -4.17872,0.62682 -6.26806,1.67149 l -44.60773,-17.96844 c -1.20138,-5.32786 -5.95467,-9.29764 -11.59591,-9.29764 -6.47702,0 -11.81532,5.32787 -11.81532,11.8571 0,6.47699 5.3383,11.80485 11.81532,11.80485 2.24605,0 4.28316,-0.57458 6.05912,-1.67149 l 44.92114,17.968446 c 1.04466,5.48456 5.74572,9.14094 11.49144,9.14094 5.745733,0 10.969123,-4.70106 11.491453,-10.49901 L 125.5635,90.152714 c 8.87975,0 16.19249,-7.10382 16.19249,-15.8791 0,-8.72307 -7.31274,-15.82686 -16.19249,-15.82686 z m 0,5.22338 c 6.26805,0 10.96911,4.75327 10.96911,10.60346 0,5.90244 -4.70106,10.65572 -10.96911,10.65572 -5.74572,0 -10.44679,-4.75328 -10.44679,-10.65572 0,-5.85019 4.70107,-10.60346 10.44679,-10.60346 z m -89.110993,2.08934 c 3.34297,0 6.26806,1.82819 7.7306,4.59659 l -4.33541,-1.72371 0,0 c -3.49966,-1.25362 -7.36497,0.47009 -8.7753,3.91753 -1.35808,3.49968 0.20896,7.4172 3.60415,8.932 l 0,0 3.65637,1.46254 c -0.57458,0.1567 -1.20137,0.20894 -1.88041,0.20894 -4.80553,0 -8.67083,-3.86532 -8.67083,-8.67081 0,-4.85776 3.8653,-8.72308 8.67083,-8.72308 z m 62.4717,25.59462 c 4.701063,0 8.357443,3.91752 8.357443,8.723036 0,4.85775 -3.65638,8.51413 -8.357443,8.51413 -3.65637,0 -6.26806,-1.56703 -7.83507,-4.43988 1.56701,0.7835 2.61169,1.30584 4.1787,1.82818 3.65637,1.56702 7.312733,-0.52234 8.879763,-3.86531 1.04468,-3.238486 0,-7.678366 -3.65637,-9.088676 l -3.656373,-1.46256 c 0.52234,-0.10446 1.56701,-0.20892 2.08935,-0.20892 z"
          id="path2986" />
