@@ -385,6 +385,9 @@ header h1 {
 }
 /* line 84, sass/partials/_page.scss */
 .ui-autocomplete.ui-menu .ui-menu-item a img {
+  width: 30px;
+  height: 30px;
+  background: url(/images/loader.gif) no-repeat -1px -1px;
   position: absolute;
   top: 3px;
   left: 3px;
