@@ -25,7 +25,7 @@ $( "#name" )/*.datepicker({
             response( $.map( data, function( item ) {
               return {
                 label: item.name,
-                image: item.image.tiny_url,
+                image: ((item.image) ? ((typeof item.image.tiny_url != "undefined") ? item.image.tiny_url : "") : ""),
                 value: item.name
               }
             }));
@@ -36,6 +36,6 @@ $( "#name" )/*.datepicker({
       }).data( "autocomplete" )._renderItem = function( ul, item ) {
         return $( "<li></li>" )
           .data( "item.autocomplete", item )
-          .append( "<a><img src='" + item.image + "' />" + item.label + "</a>" )
+          .append( "<a><img src='" + (item.image != '' ? item.image : '/images/unknown-game.png') + "' />" + item.label + "</a>" )
           .appendTo( ul );
       };
