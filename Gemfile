@@ -8,6 +8,7 @@ gem 'html5-boilerplate'
 gem 'rails_config'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'giantbomb'
+gem 'chronic'
 
 group :development, :test do
   gem 'cucumber'

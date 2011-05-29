@@ -30,6 +30,7 @@ GEM
     activesupport (3.0.7)
     arel (2.0.9)
     builder (2.1.2)
+    chronic (0.3.0)
     compass (0.10.6)
       haml (>= 3.0.4)
     crack (0.1.8)
@@ -114,6 +115,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chronic
   compass
   cucumber
   cucumber-rails
