@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="30"
+   height="30"
+   id="svg2">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6">
+    <linearGradient
+       id="linearGradient3757">
+      <stop
+         id="stop3759"
+         style="stop-color:#e0e0e0;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3761"
+         style="stop-color:#dbdbdb;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="-0.10258621"
+       y1="11.614655"
+       x2="-0.057759099"
+       y2="17.359482"
+       id="linearGradient3763"
+       xlink:href="#linearGradient3757"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <rect
+     width="29"
+     height="29"
+     x="0.5"
+     y="0.5"
+     id="rect2987"
+     style="color:#000000;fill:url(#linearGradient3763);fill-opacity:1;stroke:#d0d0d0;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  <text
+     x="15.052272"
+     y="26.701368"
+     id="text3765"
+     xml:space="preserve"
+     style="font-size:34.08676147px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;opacity:0.42105264;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"><tspan
+       x="15.052272"
+       y="26.701368"
+       id="tspan3767"
+       style="font-size:34.08676147px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Candara;-inkscape-font-specification:Candara Bold">?</tspan></text>
+</svg>
