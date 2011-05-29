@@ -324,7 +324,7 @@ a, a:active, a:visited {
 
 /* line 22, sass/partials/_page.scss */
 a:hover {
-  color: #097098;
+  color: #7590fe;
 }
 
 /* line 24, sass/partials/_page.scss */
@@ -357,12 +357,37 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 54, sass/partials/_page.scss */
+/* line 51, sass/partials/_page.scss */
+#container {
+  margin: 0 auto;
+  width: 700px;
+}
+
+/* line 57, sass/partials/_page.scss */
 header h1 {
   display: block;
   width: 100px;
   height: 100px;
   background-image: url(/images/logo.png);
+}
+
+/* line 68, sass/partials/_page.scss */
+#main #convert_form #name {
+  width: 300px;
+}
+
+/* line 79, sass/partials/_page.scss */
+.ui-autocomplete.ui-menu .ui-menu-item a {
+  min-height: 26px;
+  position: relative;
+  padding-left: 40px;
+  padding-top: 8px;
+}
+/* line 84, sass/partials/_page.scss */
+.ui-autocomplete.ui-menu .ui-menu-item a img {
+  position: absolute;
+  top: 3px;
+  left: 3px;
 }
 
 @media print {

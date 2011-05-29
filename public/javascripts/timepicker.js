@@ -71,7 +71,7 @@ $.datepicker._showDatepicker = function (input) {
     if (input.nodeName.toLowerCase() != 'input') input = $('input', input.parentNode)[0];
 
     // Do not show timepicker if datepicker is disabled
-    if ($.datepicker._isDisabledDatepicker(input)) return;
+    // if ($.datepicker._isDisabledDatepicker(input)) return;
 
     // Get instance to datepicker
     var inst = $.datepicker._getInst(input);
@@ -185,7 +185,7 @@ Timepicker.prototype = {
         this._orgMinute = null;
         this._colonPos  = -1;
         this._visible   = false;
-        this.tpDiv      = $('<div id="' + this._mainDivId + '" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible" style="width: 100px; display: none; position: absolute;"></div>');
+        this.tpDiv      = $('<div id="' + this._mainDivId + '" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="width: 100px; display: none; position: absolute;"></div>');
         this._generateHtml();
     },
 
@@ -324,6 +324,7 @@ Timepicker.prototype = {
 
         $('#hourSlider > a').css('padding', 0);
         $('#minuteSlider > a').css('padding', 0);
+        $('.ui-slider-range', '#hourSlider, #minuteSlider').removeClass('ui-widget-header');
     },
 
     _writeTime: function (type, value)

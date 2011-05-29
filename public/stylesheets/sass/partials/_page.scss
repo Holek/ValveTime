@@ -48,7 +48,10 @@ input:invalid, textarea:invalid {
 
 body {}
 
-#container {}
+#container {
+  margin: 0 auto;
+  width: 700px;
+}
 
 header {
   h1 {
@@ -59,6 +62,30 @@ header {
   }
 }
 
-#main {}
+#main {
+
+  #convert_form {
+    #name {
+      width: 300px
+    }
+  }
+}
 
 footer {}
+
+// ----------------------
+// Jquery UI changes
+// ----------------------
+.ui-autocomplete.ui-menu .ui-menu-item a {
+  min-height: 26px;
+  position: relative;
+  padding-left: 40px;
+  padding-top: 8px;
+  img {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+  }
+}
+
+
