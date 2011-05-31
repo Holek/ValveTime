@@ -36,6 +36,6 @@ $( "#name" )/*.datepicker({
       }).data( "autocomplete" )._renderItem = function( ul, item ) {
         return $( "<li></li>" )
           .data( "item.autocomplete", item )
-          .append( "<a><img src='" + (item.image != '' ? item.image : '/images/unknown-game.png') + "' />" + item.label + "</a>" )
+          .append( "<a><img src='" + (item.image != '' ? item.image : '/images/unknown-game.png') + "' /><strong>" + item.label + "</strong></a>" )
           .appendTo( ul );
       };

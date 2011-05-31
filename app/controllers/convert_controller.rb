@@ -3,13 +3,13 @@ class ConvertController < ApplicationController
   def index
     if params[:name]
       @input = params[:name]
-      date_check = Chronic.parse(@input)
-      if date_check.present?
-        @type = "date"
-        @output = date_check.to_time
+      time_frame_check = TimeFrame.find_by_input(@input)
+      if time_frame_check.present?
+        @type = "time_frame"
+        @output = time_frame_check
       else
         @type = "game"
-        @output = giantbomb_search_for(@input).first
+        @output = Game.find_by_input(@input)
       end
     end
     respond_to { |wants|

@@ -11,6 +11,8 @@ gem 'rails_config'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'giantbomb'
 gem 'chronic'
+gem 'kronic'
+
 
 group :development, :test do
   gem 'cucumber'
