@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
+gem 'mysql', :platforms => :ruby_18
+gem 'mysql2', '< 0.3', :platforms => :ruby_19
 gem 'hintable_levenshtein'
 gem 'haml'
 gem 'compass'

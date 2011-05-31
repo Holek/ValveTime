@@ -68,6 +68,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mysql (2.8.1)
+    mysql2 (0.2.7)
     nokogiri (1.4.4)
     polyglot (0.3.1)
     rack (1.2.2)
@@ -124,6 +126,8 @@ DEPENDENCIES
   hintable_levenshtein
   html5-boilerplate
   jquery-rails (>= 0.2.6)
+  mysql
+  mysql2 (< 0.3)
   rails (= 3.0.7)
   rails_config
   rcov
