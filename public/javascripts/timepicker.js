@@ -218,7 +218,7 @@ Timepicker.prototype = {
 
         this.resize();
 
-        $('#' + this._mainDivId).show();
+        $('#' + this._mainDivId).show().css({'opacity':0}).animate({'opacity':1}, 400);
 
         this._visible = true;
 
@@ -256,7 +256,7 @@ Timepicker.prototype = {
     hide: function ()
     {
         this._visible = false;
-        $('#' + this._mainDivId).hide();
+        $('#' + this._mainDivId).animate({'opacity':0}, 400, function(){$(this).hide();});
     },
 
     resize: function ()
@@ -269,9 +269,10 @@ Timepicker.prototype = {
         $('#' + this._mainDivId + ' > div.ui-datepicker-header:first-child').css('height', hdrHeight);
 
         this.tpDiv.css({
-            'height': dpDiv.height(),
-            'top'   : dpDivPos.top,
-            'left'  : dpDivPos.left + dpDiv.outerWidth() + 'px'
+            'z-index' : 1,
+            'height'  : dpDiv.height(),
+            'top'     : dpDivPos.top,
+            'left'    : dpDivPos.left + dpDiv.outerWidth() + 'px'
         });
 
         $('#hourSlider').css('height',   this.tpDiv.height() - (3.5 * hdrHeight));

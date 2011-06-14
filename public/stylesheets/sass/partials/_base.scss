@@ -1,5 +1,12 @@
 // This file must be imported before loading html5-boilerplate
 
+$color-main: #097098;
+$color-main-lighter: #7590FE;
+$color-main-darker: #2042CB;
+
+$color-cont: #CB4820;
+$color-cont-lighter: #A55E33;
+
 $base-font-family: unquote('"CartoGothic Std",sans-serif');  // default font-family
 
 $base-font-size: 13px;  // default font-size for YUI fonts
@@ -8,16 +15,25 @@ $base-line-height: 1.231;  // default line-height for YUI fonts
 
 $font-color: #444;
 
-$link-color: #2042CB;
+$link-color: $color-main-darker;
 
-$link-hover-color: #7590FE;
+$link-hover-color: $color-main-lighter;
 
-$link-active-color: #2042CB;
+$link-active-color: $color-main-darker;
 
-$link-visited-color: #2042CB;
+$link-visited-color: $color-main-darker;
 
 $selected-font-color: #fff;  // color for selected text
 
-$selected-background-color: #CB4820;  // bg-color for selected text
+$selected-background-color: $color-cont;  // bg-color for selected text
 
 $list-left-margin: 2em;  // left margin for ul an ol
+
+@mixin box-gradient($color-top, $color-bottom: darken($color-top,10%)) {
+  background-color: $color-top;
+  background-image: -moz-linear-gradient(top, $color-top, $color-bottom); // FF3.6
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $color-top),color-stop(1, $color-bottom)); // Saf4+, Chrome
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$color-top}', EndColorStr='#{$color-bottom}'); // IE6,IE7
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$color-top}', EndColorStr='#{$color-bottom}')"; // IE8
+}
+

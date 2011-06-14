@@ -1,24 +1,29 @@
 class Game < ActiveRecord::Base
 
-  belongs_to :time_frame
+  has_and_belongs_to_many :time_frames
 
-  validates_presence_of :name, :time_frame
+  validates_presence_of :name#, :time_frame
 
   def self.find_by_input(input)
-    begin
-      game = find_by_name(input)
-    rescue
-      game = Game.to_game(giantbomb_search_for(input).first)
+    game = find_by_name(input)
+    if game.nil?
+      game_record = giantbomb_search_for(input).first
+      game = game_record.to_game unless game_record.nil?
     end
-    {:game => game, :timeframe => game.time_frame}
+    unless game.nil?
+      {:game => game, :time_frames => game.time_frames}
+    else
+      nil
+    end
   end
   
   def self.to_game(giantbomb_record)
     game = Game.new
-    game.title = giantbomb_record["name"]
+    game.name = giantbomb_record["name"]
     game.source = "Giantbomb"
     game.source_url = giantbomb_record["site_detail_url"]
-    game.time_frame = TimeFrame.find_or_initialize_from_giantbomb_record(giantbomb_record)
+    time_frame = TimeFrame.find_or_initialize_from_giantbomb_record(giantbomb_record).second
+    game.time_frames << time_frame unless time_frame.nil?
     game
   end
 end

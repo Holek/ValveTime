@@ -18,8 +18,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-a, a:active, a:visited { color: $link-color; }
-a:hover { color: $link-hover-color; }
+a, a:active, a:visited, #examples li {
+  color: $link-color;
+  @include transition(all, .3s);
+  @include text-shadow(#DDD, 0, 0, 3px);
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, #examples li:hover {
+  color: $link-hover-color;
+  @include text-shadow(#444, 0, 0, 10px);
+}
 
 strong, th {
   font-weight: bold;
@@ -46,32 +55,166 @@ input:invalid, textarea:invalid {
 // Add your own custom styles below
 //-----------------------------------
 
-body {}
+body {
+  background-color: $color-main-lighter;
+}
 
 #container {
+  background-color: #EEE;
+  border: 2px solid $color-main-darker;
+  border-top: 0;
   margin: 0 auto;
   width: 700px;
+  @include border-bottom-left-radius;
+  @include border-bottom-right-radius;
+  @include box-shadow(darken($color-main-lighter, 10%), 0, 0, 15px, 0);
 }
 
 header {
+  @include box-gradient($color-main-lighter);
+  padding: 20px;
+  height: 115px;
+  position: relative;
+  z-index: 1;
+
   h1 {
-    display:block;
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    height: 150px;
+    width: 600px;
+    display: block;
+    top: 20px;
+    left: 40px;
     background-image: url(/images/logo.png);
+  }
+}
+.csstransforms header {
+  #clock {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    display: block;
+    top: 20px;
+    left: 40px;
+    background-image: url(/images/spinner/background.png);
+  }
+  #hours, #minutes {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    display: block;
+    @include transition(all, 1s, linear);
+  }
+  /* -14400 degrees = 40 hours */
+  #hours {
+    background-image: url(/images/spinner/small.png);
+    @include rotate(-14355deg);
+  }
+  #minutes {
+    background-image: url(/images/spinner/big.png);
+    @include rotate(-14470deg);
+  }
+}
+.no-csstransforms {
+  #clock, #hours, #minutes {
+    display: none;
+  }
+}
+.result {
+  padding: 30px;
+  background: #444;
+  color: #BBB;
+  position: relative;
+  #background {
+    position: absolute;
+    display: block;
+    background-color: #DDD;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #error {
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+    color: #CB4820;
   }
 }
 
 #main {
 
   #convert_form {
-    #name {
-      width: 300px
+    margin: 30px 0 0;
+    padding: 30px;
+    position: relative;
+    #input {
+      background-color: white;
+      display: block;
+      width: 550px;
+      padding: 15px 75px 15px 15px;
+      font-size: 20pt;
+      border: 2px solid #888;
+      @include border-radius;
+      @include box-shadow(#BBB, 0, 0, 5px, 0);
+      @include transition(all, .4s);
+      &:focus {
+        outline: 0;
+        border-color: $color-cont;
+        @include box-shadow(#BBB, 0, 0, 15px, 0);
+      }
+    }
+    .ui-datepicker-trigger {
+      cursor: pointer;
+      position: absolute;
+      right: 40px;
+      top: 40px;
+    }
+  }
+
+  #examples {
+    padding: 30px;
+    ul {
+      text-align: center;
+      list-style-type: none;
+      margin: 15px 5px 0 0;
+      font-size: 90%;
+      li {
+        padding: 5px 20px;
+        display: inline;
+        white-space: nowrap;
+        &.game {
+          font-style: italic;
+        }
+      }
     }
   }
 }
 
-footer {}
+footer {
+  padding: 20px 30px;
+  background: #CB4820;
+  color: #DDD;
+  position: relative;
+  @include border-bottom-left-radius(3px);
+  @include border-bottom-right-radius(3px);
+  .copyright {
+    width: 450px;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .icons {
+    position:absolute;
+    right:30px;
+    top:15px;
+    div {
+      margin: -10px;
+    }
+  }
+}
 
 // ----------------------
 // Jquery UI changes
@@ -91,4 +234,13 @@ footer {}
   }
 }
 
-
+// These selectors have to be seperated
+// stackoverflow.com/questions/2610497//2610741#2610741
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999;
+  font-style: italic;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #999;
+  font-style: italic;
+}

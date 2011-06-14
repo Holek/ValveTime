@@ -1,0 +1,15 @@
+#time_frame
+  #expectation
+    %h3 Expected release date
+    %h2=params[:input]
+  #actual_release
+    %h3 Actual release date
+    %h2=actual_release_date(@time, @output)
+  - games = @output.collect {|tf| tf.games}.flatten.uniq
+  - unless games.empty?
+    #games
+      = pluralize(games.count, "game")
+      should be released within this timeframe:
+      %ul
+        - games.each do |game|
+          %li=game.name

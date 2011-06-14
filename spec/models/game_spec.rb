@@ -19,8 +19,8 @@ describe Game do
       @game.should respond_to(:name=)
     end
 
-    it "has a time frame" do
-      @game.should respond_to(:time_frame=)
+    it "has time frames" do
+      @game.should respond_to(:time_frames=)
     end
 
     it "has a source" do

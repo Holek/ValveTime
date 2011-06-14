@@ -1,4 +1,13 @@
 .copyright
-  Copyright &copy; #{Date.today.year} Mike Połtyn
+  %ul
+    %li
+      Copyright &copy; #{Date.today.year}
+      = link_to "@holek_", "http://twitter.com/holek_"
+      %small= raw "(#{link_to("Mike Połtyn", "http://mike.poltyn.com/")})"
+    %li
+      %small All right reserved to their respective owners. Valve is a trademark of Valve Corporation.
+    %li
+      %small Valve Time Calculator is not a product of Valve Corporation. It was made solely as an appreciation for Valve and the games they make.
 .icons
-  = link_to image_tag("whiskey-powered.png"), "http://www.whiskeymedia.com/"
+  %div= link_to image_tag("whiskey-powered.png"), "http://www.whiskeymedia.com/"
+  %div= link_to image_tag("railslove.png"), "http://railslove.com/"

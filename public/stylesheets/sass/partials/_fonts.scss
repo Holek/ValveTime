@@ -9,9 +9,6 @@
   $iefont: unquote("#{$eot}?iefix");
   @font-face {
     font-family: quote($name);
-    @if $eot {
-      src: font-url($eot);
-      $font-files: font-url($iefont) unquote("format('eot')"), $font-files; }
     src: $font-files;
     @if $weight {
       font-weight: $weight;
@@ -19,6 +16,9 @@
     @if $style {
       font-style: $style;
     }
+    @if $eot {
+      src: font-url($eot);
+      $font-files: font-url($iefont) unquote("format('eot')"), $font-files; }
   }
 }
 @include my-font-face("CartoGothic Std", font-files("/fonts/CartoGothicStd-Bold-webfont.woff", woff, "/fonts/CartoGothicStd-Bold-webfont.ttf", truetype, "/fonts/CartoGothicStd-Bold-webfont.svg#CartoGothicStdBold", svg), "/fonts/CartoGothicStd-Bold-webfont.eot", bold);

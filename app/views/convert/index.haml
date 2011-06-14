@@ -1,8 +1,30 @@
-- if @output.present?
-  =render :partial => @type, :output => @output
+- if @type.present?
+  #result.result
+    - if @output.present?
+      = render :partial => @type
+      = render :partial => "matches"
+    - else
+      = render :partial => "error"
 
-= form_tag(root_path, :id => "convert_form") do
-  = field_set_tag "Start typing game's title or a date" do
-    = text_field_tag :name, (params[:name] if params[:name].present?)
-    = submit_tag "DeValvify"
+= form_tag(convert_path, :id => "convert_form", :remote => true) do
+  =# field_set_tag "Start typing game's title or a date" do
+  = text_field_tag :input, (params[:input] if params[:input].present?), :placeholder => "Start typing game's title or choose a date →"
+
+#examples
+  In this field you can type any date, expression or game's title. Here are some examples you might want to try:
+  %ul
+    %li 2 weeks ago
+    %li.game Grand Theft Auto 4
+    %li this morning
+    %li tomorrow evening
+    %li.game Half-Life 2: Episode Three
+    %li in one month
+    %li.game Starcraft II
+    %li 5.5.2010
+    %li March 7, 2008
+    %li 6th June 1996 2:45 pm
+    %li.game DOTA 2
+    %li 1 PM
+    %li yesterday
+    %li Soon
 

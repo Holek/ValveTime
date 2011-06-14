@@ -287,24 +287,24 @@ nav ul, nav li {
 
 @font-face {
   font-family: "CartoGothic Std";
+  src: url(/fonts/CartoGothicStd-Bold-webfont.woff) format('woff'), url(/fonts/CartoGothicStd-Bold-webfont.ttf) format('truetype'), url(/fonts/CartoGothicStd-Bold-webfont.svg#CartoGothicStdBold) format('svg');
+  font-weight: bold;
   src: url(/fonts/CartoGothicStd-Bold-webfont.eot);
-  src: url(/fonts/CartoGothicStd-Bold-webfont.eot?iefix) format('eot'), url(/fonts/CartoGothicStd-Bold-webfont.woff) format('woff'), url(/fonts/CartoGothicStd-Bold-webfont.ttf) format('truetype'), url(/fonts/CartoGothicStd-Bold-webfont.svg#CartoGothicStdBold) format('svg');
-  font-weight: bold;
 }
 
 @font-face {
   font-family: "CartoGothic Std";
+  src: url(/fonts/CartoGothicStd-Italic-webfont.woff) format('woff'), url(/fonts/CartoGothicStd-Italic-webfont.ttf) format('truetype'), url(/fonts/CartoGothicStd-Italic-webfont.svg#CartoGothicStdItalic) format('svg');
+  font-style: italic;
   src: url(/fonts/CartoGothicStd-Italic-webfont.eot);
-  src: url(/fonts/CartoGothicStd-Italic-webfont.eot?iefix) format('eot'), url(/fonts/CartoGothicStd-Italic-webfont.woff) format('woff'), url(/fonts/CartoGothicStd-Italic-webfont.ttf) format('truetype'), url(/fonts/CartoGothicStd-Italic-webfont.svg#CartoGothicStdItalic) format('svg');
-  font-style: italic;
 }
 
 @font-face {
   font-family: "CartoGothic Std";
-  src: url(/fonts/CartoGothicStd-BoldItalic-webfont.eot);
-  src: url(/fonts/CartoGothicStd-BoldItalic-webfont.eot?iefix) format('eot'), url(/fonts/CartoGothicStd-BoldItalic-webfont.woff) format('woff'), url(/fonts/CartoGothicStd-BoldItalic-webfont.ttf) format('truetype'), url(/fonts/CartoGothicStd-BoldItalic-webfont.svg#CartoGothicStdBoldItalic) format('svg');
+  src: url(/fonts/CartoGothicStd-BoldItalic-webfont.woff) format('woff'), url(/fonts/CartoGothicStd-BoldItalic-webfont.ttf) format('truetype'), url(/fonts/CartoGothicStd-BoldItalic-webfont.svg#CartoGothicStdBoldItalic) format('svg');
   font-weight: bold;
   font-style: italic;
+  src: url(/fonts/CartoGothicStd-BoldItalic-webfont.eot);
 }
 
 /* line 8, sass/partials/_page.scss */
@@ -318,26 +318,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 21, sass/partials/_page.scss */
-a, a:active, a:visited {
+a, a:active, a:visited, #examples li {
   color: #2042cb;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  text-shadow: #dddddd 0 0 3px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* line 22, sass/partials/_page.scss */
-a:hover {
+/* line 28, sass/partials/_page.scss */
+a:hover, #examples li:hover {
   color: #7590fe;
+  text-shadow: #444444 0 0 10px;
 }
 
-/* line 24, sass/partials/_page.scss */
+/* line 33, sass/partials/_page.scss */
 strong, th {
   font-weight: bold;
 }
 
-/* line 28, sass/partials/_page.scss */
+/* line 37, sass/partials/_page.scss */
 small {
   font-size: 85%;
 }
 
-/* line 37, sass/partials/_page.scss */
+/* line 46, sass/partials/_page.scss */
 input:invalid, textarea:invalid {
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
@@ -351,39 +363,264 @@ input:invalid, textarea:invalid {
   box-shadow: red 0 0 5px 0;
 }
 
-/* line 42, sass/partials/_page.scss */
+/* line 51, sass/partials/_page.scss */
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 51, sass/partials/_page.scss */
-#container {
-  margin: 0 auto;
-  width: 700px;
+/* line 58, sass/partials/_page.scss */
+body {
+  background-color: #7590fe;
 }
 
-/* line 57, sass/partials/_page.scss */
+/* line 62, sass/partials/_page.scss */
+#container {
+  background-color: #EEE;
+  border: 2px solid #2042cb;
+  border-top: 0;
+  margin: 0 auto;
+  width: 700px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -moz-box-shadow: #4267fe 0 0 15px 0;
+  -webkit-box-shadow: #4267fe 0 0 15px 0;
+  -o-box-shadow: #4267fe 0 0 15px 0;
+  box-shadow: #4267fe 0 0 15px 0;
+}
+
+/* line 73, sass/partials/_page.scss */
+header {
+  background-color: #7590fe;
+  background-image: -moz-linear-gradient(top, #7590fe, #4267fe);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7590fe), color-stop(1, #4267fe));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#7590fe', EndColorStr='#4267fe');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7590fe', EndColorStr='#4267fe')";
+  padding: 20px;
+  height: 115px;
+  position: relative;
+  z-index: 1;
+}
+/* line 80, sass/partials/_page.scss */
 header h1 {
+  position: absolute;
+  height: 150px;
+  width: 600px;
   display: block;
-  width: 100px;
-  height: 100px;
+  top: 20px;
+  left: 40px;
   background-image: url(/images/logo.png);
 }
 
-/* line 68, sass/partials/_page.scss */
-#main #convert_form #name {
-  width: 300px;
+/* line 90, sass/partials/_page.scss */
+.csstransforms header {
+  /* -14400 degrees = 40 hours */
+}
+/* line 91, sass/partials/_page.scss */
+.csstransforms header #clock {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  display: block;
+  top: 20px;
+  left: 40px;
+  background-image: url(/images/spinner/background.png);
+}
+/* line 100, sass/partials/_page.scss */
+.csstransforms header #hours, .csstransforms header #minutes {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  display: block;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -moz-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+/* line 108, sass/partials/_page.scss */
+.csstransforms header #hours {
+  background-image: url(/images/spinner/small.png);
+  -moz-transform: rotate(-14355deg);
+  -webkit-transform: rotate(-14355deg);
+  -o-transform: rotate(-14355deg);
+  transform: rotate(-14355deg);
+}
+/* line 112, sass/partials/_page.scss */
+.csstransforms header #minutes {
+  background-image: url(/images/spinner/big.png);
+  -moz-transform: rotate(-14470deg);
+  -webkit-transform: rotate(-14470deg);
+  -o-transform: rotate(-14470deg);
+  transform: rotate(-14470deg);
 }
 
-/* line 79, sass/partials/_page.scss */
+/* line 118, sass/partials/_page.scss */
+.no-csstransforms #clock, .no-csstransforms #hours, .no-csstransforms #minutes {
+  display: none;
+}
+
+/* line 122, sass/partials/_page.scss */
+.result {
+  padding: 30px;
+  background: #444;
+  color: #BBB;
+  position: relative;
+}
+/* line 127, sass/partials/_page.scss */
+.result #background {
+  position: absolute;
+  display: block;
+  background-color: #DDD;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 137, sass/partials/_page.scss */
+.result #error {
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+  color: #CB4820;
+}
+
+/* line 147, sass/partials/_page.scss */
+#main #convert_form {
+  margin: 30px 0 0;
+  padding: 30px;
+  position: relative;
+}
+/* line 151, sass/partials/_page.scss */
+#main #convert_form #input {
+  background-color: white;
+  display: block;
+  width: 550px;
+  padding: 15px 75px 15px 15px;
+  font-size: 20pt;
+  border: 2px solid #888;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: #bbbbbb 0 0 5px 0;
+  -webkit-box-shadow: #bbbbbb 0 0 5px 0;
+  -o-box-shadow: #bbbbbb 0 0 5px 0;
+  box-shadow: #bbbbbb 0 0 5px 0;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+/* line 161, sass/partials/_page.scss */
+#main #convert_form #input:focus {
+  outline: 0;
+  border-color: #cb4820;
+  -moz-box-shadow: #bbbbbb 0 0 15px 0;
+  -webkit-box-shadow: #bbbbbb 0 0 15px 0;
+  -o-box-shadow: #bbbbbb 0 0 15px 0;
+  box-shadow: #bbbbbb 0 0 15px 0;
+}
+/* line 167, sass/partials/_page.scss */
+#main #convert_form .ui-datepicker-trigger {
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+/* line 175, sass/partials/_page.scss */
+#main #examples {
+  padding: 30px;
+}
+/* line 177, sass/partials/_page.scss */
+#main #examples ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 15px 5px 0 0;
+  font-size: 90%;
+}
+/* line 182, sass/partials/_page.scss */
+#main #examples ul li {
+  padding: 5px 20px;
+  display: inline;
+  white-space: nowrap;
+}
+/* line 186, sass/partials/_page.scss */
+#main #examples ul li.game {
+  font-style: italic;
+}
+
+/* line 194, sass/partials/_page.scss */
+footer {
+  padding: 20px 30px;
+  background: #CB4820;
+  color: #DDD;
+  position: relative;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -o-border-bottom-left-radius: 3px;
+  -ms-border-bottom-left-radius: 3px;
+  -khtml-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -o-border-bottom-right-radius: 3px;
+  -ms-border-bottom-right-radius: 3px;
+  -khtml-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 201, sass/partials/_page.scss */
+footer .copyright {
+  width: 450px;
+}
+/* line 203, sass/partials/_page.scss */
+footer .copyright ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 209, sass/partials/_page.scss */
+footer .icons {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+/* line 213, sass/partials/_page.scss */
+footer .icons div {
+  margin: -10px;
+}
+
+/* line 222, sass/partials/_page.scss */
 .ui-autocomplete.ui-menu .ui-menu-item a {
   min-height: 26px;
   position: relative;
   padding-left: 40px;
   padding-top: 8px;
 }
-/* line 84, sass/partials/_page.scss */
+/* line 227, sass/partials/_page.scss */
 .ui-autocomplete.ui-menu .ui-menu-item a img {
   width: 30px;
   height: 30px;
@@ -391,6 +628,18 @@ header h1 {
   position: absolute;
   top: 3px;
   left: 3px;
+}
+
+/* line 239, sass/partials/_page.scss */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* line 243, sass/partials/_page.scss */
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #999;
+  font-style: italic;
 }
 
 @media print {
