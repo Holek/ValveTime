@@ -6,3 +6,4 @@ tmp/
 config/initializers/giantbomb.rb
 config/database.yml
 coverage/
+.DS_Store
