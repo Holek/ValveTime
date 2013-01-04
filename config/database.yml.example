@@ -1,20 +1,20 @@
 development:
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   database: valvetime_development
   username: root
-  password: 
+  password:
 test: &TEST
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   database: valvetime_test
   username: root
-  password: 
+  password:
 production:
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   database: valvetime_production
   username: root
-  password: 
+  password:
 cucumber: &CUCUMBER
   <<: *test
