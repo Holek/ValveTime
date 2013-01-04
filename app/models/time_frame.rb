@@ -8,8 +8,8 @@ class TimeFrame < ActiveRecord::Base
     # whole lotta parsing and arcane magic goes here
     # instance of time/span/approximation comes in,
     # actual time comes out
-    
-    time = parse_text_into_time(input)
+
+    time = ValveTimeHelper.parse_text_into_time(input)
     return nil if time.nil? # if we don't get the date, let's bail
     time = time.change(:year => Date.today.year) if time.year.zero?
     expectation = find(:first, :conditions => [ "lower(expectation) LIKE ?", "%#{input.downcase}%" ])
@@ -81,8 +81,8 @@ class TimeFrame < ActiveRecord::Base
       #What to do with past dates?
 
       possible_expectations = []
-      
-      
+
+
       possibilities.each do |possibility|
         begin
           found_possibility = find(:first, :conditions => possibility)

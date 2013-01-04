@@ -11,7 +11,6 @@ class ConvertController < ApplicationController
       else
         @type = "game"
         @output = Game.find_by_input(@input)
-        #@time = @output.
       end
     end
 
@@ -21,7 +20,7 @@ class ConvertController < ApplicationController
       wants.txt { render :layout => false }
     }
   end
-  
+
   def autocomplete
     # if a user typed in a date, we don't want to show any autocomplete stuff
     Date.parse(params[:input])
@@ -29,7 +28,7 @@ class ConvertController < ApplicationController
       wants.json { render :text => [] }
     }
   rescue ArgumentError, TypeError
-    result = giantbomb_search_for(params[:input])
+    result = ValveTimeHelper.giantbomb_search_for(params[:input])
     respond_to { |wants|
       wants.json { render :text => result.to_json }
     }

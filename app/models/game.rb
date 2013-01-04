@@ -7,7 +7,7 @@ class Game < ActiveRecord::Base
   def self.find_by_input(input)
     game = find_by_name(input)
     if game.nil?
-      game_record = giantbomb_search_for(input).first
+      game_record = ValveTimeHelper.giantbomb_search_for(input).first
       game = game_record.to_game unless game_record.nil?
     end
     unless game.nil?
@@ -16,7 +16,7 @@ class Game < ActiveRecord::Base
       nil
     end
   end
-  
+
   def self.to_game(giantbomb_record)
     game = Game.new
     game.name = giantbomb_record["name"]
