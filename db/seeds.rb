@@ -5,7 +5,7 @@ hl2_e2 = Game.create(:name => "Half-Life 2: Episode Two")
 hl2_e3 = Game.create(:name => "Half-Life 2: Episode Three")
 tf2 = Game.create(:name => "Team Fortress 2")
 
-TimeFrame.create([
+time_frames = [
   {:name => "Half-Life release", :expect_day => 1, :expect_month => 11, :expect_year => 1997,
    :advance_by_day => 18, :advance_by_month => 1, :advance_by_year => 1, :games => [hl]},
   {:name => "First mention of Team Fortress 2", :expect_year => 1998,
@@ -43,15 +43,13 @@ TimeFrame.create([
   {:explanation => "Team Fortress 2 Gold Rush Update was delayed three times since February 1st (second time at April 15th) until it was finally released at end of April",
    :expect_day => 15, :expect_month => 4, :advance_by_day => 14,
    :source => "Computer and Video Games Online", :source_url => "http://www.computerandvideogames.com/article.php?id=185631&site=cvg"}
-])
+]
 20.upto(26) do |day|
-  TimeFrame.create(
-    {:explanation => "Team Fortress 2 Gold Rush Update was delayed three times since February 1st - third time stating it will be released on \"the week of April 20th\", finally being released at the very end of April",
+  time_frames << {:explanation => "Team Fortress 2 Gold Rush Update was delayed three times since February 1st - third time stating it will be released on \"the week of April 20th\", finally being released at the very end of April",
      :expect_month => 4, :expect_day => day, :advance_by_day => 29-day,
      :source => "ShackNews", :source_url => "http://www.shacknews.com/onearticle.x/51941"}
-  )
 end
-TimeFrame.create([
+time_frames = time_frames + [
   {:explanation => "Day of Defeat Source Steamworks beta went live three months after the first given release date.",
    :expect_month => 1, :advance_by_month => 4, :advance_by_day => 22,
    :source => "Steam Forums", :source_url => "http://forums.steampowered.com/forums/showpost.php?p=7097740&postcount=149"},
@@ -63,4 +61,7 @@ TimeFrame.create([
   {:explanation => "On the 119th Update it was said, the Engineer class update for Team Fortress 2 will come \"Soon\". The update was released two months later.",
    :expect_month => 4, :expect_day => 18, :advance_by_day => 8, :advance_by_month => 2,
    :source => "Team Fortress 2 119th Update", :source_url => "http://www.teamfortress.com/119/comingsoon.html"}
-])
+]
+time_frames.each do |time_frame|
+  TimeFrame.create(time_frame)
+end
