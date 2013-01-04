@@ -1,7 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require "rails/all"
-
+require "sass-rails"
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
@@ -13,7 +13,7 @@ module ValveTime
     # -- all .rb files in that directory are automatically loaded.
 
     # Custom directories with classes and modules you want to be autoloadable.
-    # config.autoload_paths += %W(#{config.root}/extras)
+    config.autoload_paths += %W(#{config.root}/lib)
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -42,6 +42,12 @@ module ValveTime
     config.generators do |g|
       g.template_engine :haml
     end
+
+    config.assets.enabled = true
+    config.sass.load_paths ||= []
+    config.sass.load_paths << "#{Rails.root}/app/assets/stylesheets"
+    config.sass.load_paths << "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets"
+    config.sass.load_paths << "#{Gem.loaded_specs['compass-h5bp'].full_gem_path}/stylesheets"
 
     config.action_view.javascript_expansions[:defaults] = %w(jquery.min jquery-ui.min rails timepicker application)
   end

@@ -37,7 +37,7 @@ strong, th {
 small {
   // Use font-size mixin to convert to percentage for YUI
   // http://developer.yahoo.com/yui/3/cssfonts/#fontsize
-  @include font-size(11px);  // approx 85% when base-font-size eq 13px
+  font-size: 11px;  // approx 85% when base-font-size eq 13px
 }
 
 // Add the 'required' attribute on your
@@ -82,7 +82,7 @@ header {
     height: 150px;
     width: 600px;
     display: block;
-    top: 20px;
+    top: 0;
     left: 40px;
     background-image: url(/images/logo.png);
   }
@@ -102,7 +102,7 @@ header {
     height: 150px;
     width: 150px;
     display: block;
-    @include transition(all, 1s, linear);
+    @include transition(all 1s linear);
   }
   /* -14400 degrees = 40 hours */
   #hours {
@@ -133,7 +133,7 @@ header {
     left: 0;
     right: 0;
   }
-  
+
   #error {
     font-size: 14pt;
     font-weight: bold;
